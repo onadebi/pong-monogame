@@ -84,11 +84,11 @@ namespace Pong
             }
             if (kstate.IsKeyDown(Keys.Left))
             {
-                _ballPosition.X += _ballSpeed * (float)gameTime.ElapsedGameTime.TotalSeconds;
+                _ballPosition.X -= _ballSpeed * ((float)gameTime.ElapsedGameTime.TotalSeconds *3);
             }
             if (kstate.IsKeyDown(Keys.Right))
             {
-                _ballPosition.X -= _ballSpeed * (float)gameTime.ElapsedGameTime.TotalSeconds;
+                _ballPosition.X += _ballSpeed * ((float)gameTime.ElapsedGameTime.TotalSeconds*3);
             }
 
             #region CODE to ensure ball does not go outside the boundaries
